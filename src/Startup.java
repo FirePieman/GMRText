@@ -21,10 +21,9 @@ public class Startup extends JDialog
     private JPanel contentPane;
     JTextField textField;
     JTextField textField_1;
-    private final Action action;
+
     
     public Startup() {
-        this.action = (Action)new StartupSwingAction();
         this.setModal(true);
         this.setDefaultCloseOperation(2);
         this.setBounds(100, 100, 450, 300);

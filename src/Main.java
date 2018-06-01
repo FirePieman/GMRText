@@ -18,8 +18,10 @@ import java.util.ArrayList;
 // 
 
 public class Main {
-	static final String username = "mitchellgmr";
-	static final String password = "Fire_Pieman";
+	
+	//need to add a screen to set username and password
+	static final String username = "mitchellgmr"; //username for email account used to 
+	static final String password = "Fire_Pieman"; //password for email account, currently incorrect password
 	static final long waitTime = 300000L;
 	static Time expire;
 	static Time current;
@@ -225,28 +227,35 @@ public class Main {
 			System.out.println("could not load");
 			return false;
 		}
+		
 		int lineCount = 0;
-		final String games = scanner.nextLine();
-		final Scanner numGame = new Scanner(games);
+		
+		String games = scanner.nextLine();
+		Scanner numGame = new Scanner(games);
 		Main.numGames = numGame.nextInt();
 		numGame.close();
-		final String bigId = scanner.nextLine();
-		final Scanner getId = new Scanner(bigId);
+		
+		String bigId = scanner.nextLine();
+		Scanner getId = new Scanner(bigId);
 		Main.id = getId.next();
 		getId.close();
-		final String theAuth = scanner.nextLine();
-		final Scanner getAuth = new Scanner(theAuth);
+		
+		String theAuth = scanner.nextLine();
+		Scanner getAuth = new Scanner(theAuth);
 		Main.auth = getAuth.next();
 		getAuth.close();
+		
 		while (scanner.hasNextLine()) {
-			final String store = scanner.nextLine();
-			final Scanner storeScan = new Scanner(store);
-			final PlayerContact c = new PlayerContact(storeScan.nextLong(), storeScan.next(), storeScan.next());
+			String store = scanner.nextLine();
+			Scanner storeScan = new Scanner(store);
+			PlayerContact c = new PlayerContact(storeScan.nextLong(), storeScan.next(), storeScan.next());
 			Main.contactInfo.add(c);
 			++lineCount;
 			storeScan.close();
 		}
+		
 		scanner.close();
+		
 		if (lineCount > 0) {
 			final String url = "http://multiplayerrobot.com/api/Diplomacy/GetGamesAndPlayers?playerIDText=" + Main.id
 					+ "&authKey=" + Main.auth;
