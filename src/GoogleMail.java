@@ -1,18 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
  * 
- * Could not load the following classes:
- *  com.sun.mail.smtp.SMTPTransport
- *  javax.mail.Address
- *  javax.mail.Authenticator
- *  javax.mail.Message
- *  javax.mail.Message$RecipientType
- *  javax.mail.MessagingException
- *  javax.mail.Session
- *  javax.mail.Transport
- *  javax.mail.internet.AddressException
- *  javax.mail.internet.InternetAddress
- *  javax.mail.internet.MimeMessage
  */
 
 import com.sun.mail.smtp.SMTPTransport;
@@ -49,7 +36,7 @@ public class GoogleMail {
         props.put("mail.smtps.quitwait", "false");
         Session session = Session.getInstance((Properties)props, (Authenticator)null);
         MimeMessage msg = new MimeMessage(session);
-        msg.setFrom((Address)new InternetAddress(String.valueOf(username) + "@hotmail.com"));
+        msg.setFrom((Address)new InternetAddress(String.valueOf(username) + "@gmail.com"));
         msg.setRecipients(Message.RecipientType.TO, (Address[])InternetAddress.parse((String)recipientEmail, (boolean)false));
         if (ccEmail.length() > 0) {
             msg.setRecipients(Message.RecipientType.CC, (Address[])InternetAddress.parse((String)ccEmail, (boolean)false));

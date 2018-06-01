@@ -13,13 +13,11 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import java.util.ArrayList;
 
-// 
-// Decompiled by Procyon v0.5.30
-// 
+
 
 public class Main {
 	
-	//need to add a screen to set username and password
+	//TODO need to add a screen to set username and password 
 	static final String username = "mitchellgmr"; //username for email account used to 
 	static final String password = "Fire_Pieman"; //password for email account, currently incorrect password
 	static final long waitTime = 300000L;
@@ -50,7 +48,6 @@ public class Main {
 		firstInit = !load();
 
 		if (!firstInit) {
-			firstInit = false;
 			frames = new Display[Main.numGames == 0 ? 1 : Main.numGames];
 			hours = new boolean[Main.numGames][3];
 			playerInfo = new int[Main.numGames];
@@ -296,20 +293,20 @@ public class Main {
 		System.out.println("\ttime is " + Main.current);
 	}
 
-	public static void setId(final String id) {
+	public static void setId(String id) {
 		Main.id = id;
 		System.out.println("set id");
 	}
 
-	public static void setAuth(final String auth) {
+	public static void setAuth(String auth) {
 		Main.auth = auth;
 		System.out.println("set auth");
 	}
 
-	public static void getGMRInfo(final String url) throws IOException {
-		final URL GMR = new URL(url);
+	public static void getGMRInfo(String url) throws IOException {
+		URL GMR = new URL(url);
 		
-			final BufferedReader in = new BufferedReader(new InputStreamReader(GMR.openStream()));
+			BufferedReader in = new BufferedReader(new InputStreamReader(GMR.openStream()));
 			String json = "";
 			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
@@ -317,10 +314,8 @@ public class Main {
 			}
 			in.close();
 			System.out.println("\tThis is the Json: " + json);
-			final Gson gson = new Gson();
-			Main.gmr = (GMRObject) gson.fromJson(json, (Class) GMRObject.class);
-		
-		
+			Gson gson = new Gson();
+			Main.gmr = (GMRObject) gson.fromJson(json, (Class) GMRObject.class);	
 	}
 
 	public static void setup(boolean showUI) throws IOException {

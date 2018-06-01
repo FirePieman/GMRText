@@ -1,8 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
- * 
- * Could not load the following classes:
- *  Player
+ * Class used to store the JSON from API calls to GMR website
  */
 import java.util.ArrayList;
 
