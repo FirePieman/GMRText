@@ -12,8 +12,9 @@ import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.JDialog;
 
-// 
-// Decompiled by Procyon v0.5.30
+// TODO Remove my information from this panel
+// Startup window for when you launch the program
+// Has my information in by default for debugging purposes.
 // 
 
 public class Startup extends JDialog

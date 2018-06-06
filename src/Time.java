@@ -1,5 +1,6 @@
 /*
- * Decompiled with CFR 0_115.
+ * Time class I wrote
+ * TODO Potentially use javas built in time class?
  */
 public class Time {
     private int hour;

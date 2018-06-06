@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Information for the current turn in a game
  */
 public class Turn {
     public long TurnId;

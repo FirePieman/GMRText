@@ -1,9 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
- * 
- * Could not load the following classes:
- *  Phone$1
- *  PlayerContact
+ * The window that handles associating a player with their phone number
  */
 import java.awt.Component;
 import java.awt.Container;
@@ -56,7 +52,6 @@ extends JDialog {
         lblPlayer_1.setBounds(31, 133, 125, 14);
         this.contentPane.add(lblPlayer_1);
         JButton btnNext = new JButton("Next");
-        //mas btnNext.addMouseListener((MouseListener)new /* Unavailable Anonymous Inner Class!! */);
         btnNext.addMouseListener((MouseListener)new PhoneMouseListener(this, textField, playa, (JComboBox)comboBox));
         btnNext.setBounds(335, 227, 89, 23);
         this.contentPane.add(btnNext);
@@ -64,9 +59,5 @@ extends JDialog {
         lblPleaseEnterIn.setFont(new Font("Tahoma", 0, 12));
         lblPleaseEnterIn.setBounds(31, 57, 376, 37);
         this.contentPane.add(lblPleaseEnterIn);
-    }
-
-    static /* synthetic */ JTextField access$0(Phone phone) {
-        return phone.textField;
     }
 }

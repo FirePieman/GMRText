@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Handles a players contact information.
  */
 public class PlayerContact {
     private long userId;

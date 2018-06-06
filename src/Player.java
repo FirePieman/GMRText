@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Stores information on the player who's login credentials are used to get game information
  */
 public class Player {
     public long SteamID;

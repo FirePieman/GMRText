@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Setting a players phone number listenter.
  */
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -8,23 +8,23 @@ import javax.swing.JTextField;
 
 class PhoneMouseListener
 extends MouseAdapter {
-    private final /* synthetic */ PlayerContact val$playa;
-    private final /* synthetic */ JComboBox val$comboBox;
-    private final Phone phone; //mas
-    private JTextField textField; //mas
+    private final  PlayerContact player;
+    private final  JComboBox comboBox;
+    private final Phone phone; 
+    private JTextField textField; 
 
-    PhoneMouseListener(Phone phone, JTextField textField, PlayerContact playerContact, JComboBox jComboBox) { //mas
-        this.val$playa = playerContact;
-        this.val$comboBox = jComboBox;
-        this.phone = phone; //mas
-        this.textField = textField; //mas
+    PhoneMouseListener(Phone phone, JTextField textField, PlayerContact playerContact, JComboBox jComboBox) {
+        this.player = playerContact;
+        this.comboBox = jComboBox;
+        this.phone = phone; 
+        this.textField = textField; 
     }
 
     @Override
     public void mouseClicked(MouseEvent arg0) {
-        this.val$playa.setNumber(textField.getText()); //mas
-        this.val$playa.setCarrier((String)this.val$comboBox.getSelectedItem()); 
-        phone.setVisible(false); //mas
-        phone.dispose(); //mas
+        this.player.setNumber(textField.getText()); 
+        this.player.setCarrier((String)this.comboBox.getSelectedItem()); 
+        phone.setVisible(false); 
+        phone.dispose(); 
     }
 }

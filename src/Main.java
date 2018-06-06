@@ -14,13 +14,16 @@ import javax.mail.internet.AddressException;
 import java.util.ArrayList;
 
 
+/**
+ * Main program loop
+ */
 
 public class Main {
 	
 	//TODO need to add a screen to set username and password 
 	static final String username = "mitchellgmr"; //username for email account used to 
 	static final String password = "Fire_Pieman"; //password for email account, currently incorrect password
-	static final long waitTime = 300000L;
+	static final long waitTime = 300000L; //5 minutes between every check from website
 	static Time expire;
 	static Time current;
 	private static String id;
@@ -169,7 +172,7 @@ public class Main {
 				}
 
 			}
-			Thread.sleep(300000L);
+			Thread.sleep(waitTime);
 			Display[] array2;
 			for (int length = (array2 = frames).length, l = 0; l < length; ++l) {
 				final Display frame = array2[l];

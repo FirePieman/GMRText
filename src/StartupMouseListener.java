@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * Handles moving from the startup window to the next pane
  */
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

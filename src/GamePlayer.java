@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
+ * A member of a game of civ
  */
 public class GamePlayer {
     public long UserId;

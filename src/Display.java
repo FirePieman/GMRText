@@ -1,5 +1,6 @@
 /*
- * Decompiled with CFR 0_115.
+ * Main window, displays the current players turn and amount of time until their turn is skipped.
+ * Generated with Java Swing UI.
  */
 import java.awt.Component;
 import java.awt.Container;
@@ -22,15 +23,15 @@ extends JFrame {
         this.contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         this.setContentPane(this.contentPane);
         this.contentPane.setLayout(null);
-        JLabel lblItIsCurrently = new JLabel("It is currently " + player + "'s turn in " + game);
-        lblItIsCurrently.setFont(new Font("Tahoma", 0, 20));
-        lblItIsCurrently.setBounds(42, 11, 469, 71);
-        this.contentPane.add(lblItIsCurrently);
-        JLabel lblTheyHaveX = new JLabel("They have " + time + " to do their turn");
-        lblTheyHaveX.setBounds(85, 80, 487, 14);
-        this.contentPane.add(lblTheyHaveX);
-        JLabel lblTheyHaveBeen = new JLabel("They have been texted " + notifications + " times");
-        lblTheyHaveBeen.setBounds(85, 105, 209, 14);
-        this.contentPane.add(lblTheyHaveBeen);
+        JLabel lblCurrentPlayer = new JLabel("It is currently " + player + "'s turn in " + game);
+        lblCurrentPlayer.setFont(new Font("Tahoma", 0, 20));
+        lblCurrentPlayer.setBounds(42, 11, 469, 71);
+        this.contentPane.add(lblCurrentPlayer);
+        JLabel lblTimeLeft = new JLabel("They have " + time + " to do their turn");
+        lblTimeLeft.setBounds(85, 80, 487, 14);
+        this.contentPane.add(lblTimeLeft);
+        JLabel lblNumNotifications = new JLabel("They have been texted " + notifications + " times");
+        lblNumNotifications.setBounds(85, 105, 209, 14);
+        this.contentPane.add(lblNumNotifications);
     }
 }

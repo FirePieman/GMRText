@@ -1,5 +1,6 @@
 /*
- * 
+ * Handles sending an email from whatever email account in order to text a player it is there turn.
+ * Based on code from stack oveflow.
  */
 
 import com.sun.mail.smtp.SMTPTransport;

@@ -1,9 +1,5 @@
 /*
- * Decompiled with CFR 0_115.
- * 
- * Could not load the following classes:
- *  GamePlayer
- *  Turn
+ * Class used to store info about a GMR game a player is involved in.
  */
 import java.util.ArrayList;
 
